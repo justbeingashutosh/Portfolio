@@ -1,0 +1,255 @@
+/* Importing fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* Declaring Global Variables */
+:root{
+    --background-dark: #02091d;
+    --background-light: #d0d1d0;
+    --text-dark: #d8e0fd;
+    --text-light: #020a27;
+    --primary-dark: #738ef7;
+    --primary-light: #08228c;
+    --secondary-dark: #30099a;
+    --secondary-light: #8c65f6;
+    --accent-dark: #8430f3;
+    --accent-light: #610ccf;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    font-family: Nunito, sans-serif;
+    background-color: var(--background-light);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    /* position: relative; */
+    overflow-x: hidden;
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    z-index: 100;
+}
+
+.navbar::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* opacity: 50%; */
+    background-color: var(--background-dark);
+    z-index: -1;
+}
+
+.navelements{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    color: var(--text-light);
+}
+
+.navelements p a{
+    color: var(--text-dark);
+    position: relative;
+}
+
+
+.footer {
+    display: flex;
+    background-color: var(--background-dark);
+    width: 100%;
+    height: auto;
+    position: relative; /* This makes the footer follow the natural flow of content */
+    bottom: 0;
+    color: var(--background-light);
+    font-weight: var(--font-mid);
+    justify-content: center;
+    align-items: center;
+}
+
+.hero{
+    display: flex;
+    height: 600px;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 2px solid red; */
+}
+
+.hero::before{
+    content:'';
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-dark);
+    position: absolute;
+    z-index: 0;
+    opacity: 50%;
+}
+
+.herotitle{
+    color: var(--text-dark);
+    font-size: 100px;
+    font-weight: 800;
+    z-index: 1;
+    align-self: center;
+}
+.hero-subtitle{
+    color: var(--text-dark);
+    z-index: 1;
+    font-size: 30px;
+    justify-self: center;
+    align-self: center;
+}
+.hero-subtitle span{
+    color: yellow;
+    font-weight: 800;
+}
+.hero-text{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    z-index: 1;
+    align-self: center;
+    /* border: solid blue 2px; */
+}
+.landingvideo{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.about-bg{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.profile-pic{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    justify-self: flex-end;
+    padding-right: 2%;
+    margin-top: 1%;
+}
+
+.connectbtn{
+    width: 100px;
+    height: 75%;
+    border-radius: 100px;
+    border: 0px;
+    color: var(--text-dark);
+    margin-top: 1.5%;
+    cursor: pointer;
+    background-image: linear-gradient(45deg, rgb(23, 228, 176) 2%, #2472fc, #8711c1);
+    background-size: 300%;
+    animation: animateConnect 4s infinite alternate;
+}
+
+.connect{
+    display: flex;
+    justify-content: flex-end;
+    gap: 1em;
+}
+
+.about-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    /* border: solid green 2px; */
+    width: 100%;
+    height: max-content;
+    padding-top: 3em;
+    color: var(--background-light);
+    font-weight: var(--font-mid);
+    justify-content: center;
+    align-items: center;
+}
+
+.dp{
+    /* mix-blend-mode: ; */
+    border-radius: 1000px;
+    /* box-shadow: 0 60px 500px -140px rgba(0, 0, 0, 0.3); */
+}
+
+.resume{
+    /* z-index: 1; */
+    /* align-self: flex-end; */
+    justify-self: center;
+    position: relative;
+    align-self: center;
+    border-radius: 1000px;
+    height: 200%;
+    width: 10%;
+    cursor: pointer;
+    border: 0;
+    transition: background-image 5s;
+}
+.resume::before{
+    left: -5px;
+    top: -5px;
+    border-radius: 1000px;
+    z-index: -1;
+    position: absolute;
+    height: 125%;
+    width: 110%;
+    content: '';
+    background-image: linear-gradient(45deg, rgb(23, 228, 176) 2%, #2472fc, #8711c1);
+
+}
+
+.resume:hover{
+    z-index: 0;
+    color: var(--text-dark);
+    box-shadow: 40px 0 70px var(--accent-dark);
+
+}
+
+.resume-div{
+    height: 100%;
+    padding-left: 50%;
+    width: auto;
+}
+.resume-wrapper{
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30%;
+    width: 100%;
+    height: auto;
+    /* border: solid red 2px; */
+}
+
+.about-me{
+    margin-left: 30em;
+    
+    word-wrap: break-word;
+    color: var(--text-light);
+}
+
+.about-me span, .about-me a{
+    text-decoration: none;
+    color: var(--secondary-dark)
+}
+
+@keyframes animateConnect {
+    0%{
+        background-position: right;
+    }
+    100%{
+        background-position: left;
+    }
+}
+
+
