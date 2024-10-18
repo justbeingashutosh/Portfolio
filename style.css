@@ -27,6 +27,21 @@ body{
     overflow-x: hidden;
 }
 
+/* Custom Scrollbar */
+::-webkit-scrollbar{
+    width: 0.45em;
+}
+
+::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--accent-dark);
+    border-radius: 1000px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: var(--accent-light);
+}
 .navbar{
     position: fixed;
     width: 100%;
@@ -85,7 +100,7 @@ body{
 
 .hero{
     display: flex;
-    height: 600px;
+    height: 800px;
     position: relative;
     flex-direction: column;
     justify-content: center;
@@ -308,7 +323,7 @@ body{
     z-index: 1;
     align-items: center;
     justify-content: center;
-    margin-top: 30%;
+    margin-top: 40%;
     width: 100%;
     height: auto;
     /* border: solid red 2px; */
@@ -329,6 +344,24 @@ body{
     text-decoration: none;
     color: var(--secondary-dark)
 }
+
+.project-wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.project{
+    display: subgrid;
+}
+.project-head{
+    justify-self: flex-end;
+}
+.project-section{
+    width: 100%;
+}
+
+
 
 @keyframes animateConnect {
     0%{
