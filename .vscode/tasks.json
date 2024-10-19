@@ -1,0 +1,11 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Create project setup",
+            "type": "shell",
+            "command": "mkdir -p assets components && echo 'Generating index.html, style.css, and main.js' && echo \"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n<meta charset=\\\"UTF-8\\\">\\n<meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\n<title>Document</title>\\n<link rel=\\\"stylesheet\\\" href=\\\"style.css\\\">\\n<script defer src=\\\"main.js\\\"></script>\\n</head>\\n<body>\\n\\n</body>\\n</html>\" > index.html && echo ':root{\\n --clr-bg-light: #ffffff;\\n}\\n\\n::-webkit-scrollbar{}\\n\\nbody{\\n margin: 0;\\n height: 100vh;\\n width: 100vw;\\n background-color: var(--clr-bg-light);\\n}' > style.css && touch main.js",
+            "problemMatcher": []
+        }
+    ]
+}
