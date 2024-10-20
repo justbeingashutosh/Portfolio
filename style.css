@@ -15,6 +15,10 @@
   --accent-light: #610ccf;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   height: 100vh;
   width: 100vw;
@@ -25,6 +29,7 @@ body {
   flex-direction: column;
   /* position: relative; */
   overflow-x: hidden;
+  user-select: none;
 }
 
 /* Custom Scrollbar */
@@ -218,7 +223,11 @@ body {
   transform: translateY(-100px);
   opacity: 0;
   animation-name: scrollListener;
-  animation-timeline: scroll();
+  /* animation-duration: 2s; */
+  animation-timeline: view();
+  animation-range: 0px 90vh;
+  animation-fill-mode: forwards;
+  /* animation-direction: for; */
   /* box-shadow: 0 60px 500px -140px rgba(0, 0, 0, 0.3); */
 }
 
@@ -293,8 +302,6 @@ body {
 }
 
 .resume {
-  /* z-index: 1; */
-  /* align-self: flex-end; */
   justify-self: center;
   position: relative;
   align-self: center;
@@ -351,7 +358,9 @@ body {
   transform: translateY(100px);
   opacity: 0;
   animation-name: scrollListener;
-  animation-timeline: scroll();
+  animation-timeline: view();
+  animation-range: 0px 90vh;
+  animation-fill-mode: forwards;
 }
 
 .about-me span,
@@ -364,16 +373,33 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
-  margin-top: 2rem;
-}
-.project {
+  padding: 1em;
   display: subgrid;
 }
 .project-head {
-  justify-self: flex-end;
+  padding: 0.5em;
+  font-size: 2rem;
+  font-weight: 700;
+  /* color: white; */
+  /* margin-left: auto; */
+  padding: 0.3em;
+  border: solid rgb(92, 92, 92) 1px;
+  border-radius: 100px;
+  background-color: #f66565
 }
 .project-section {
   width: 100%;
+}
+
+.project{
+  background-color: #f66565;
+  border-radius: 20px;
+}
+
+.projects-section fieldset{
+  border-radius: 10px;
+  margin: 2em;
+  background-color: #d1a1a3;
 }
 
 .certificate-wrapper{
@@ -381,14 +407,25 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 1em;
   padding: 1em;
-  border: solid var(--secondary-light) 2px;
-  margin-bottom: 2em;
+  /* padding-bottom: 2em; */
 }
 
+.certifications-section fieldset{
+  border-radius: 10px;
+  margin: 2em;
+  background-color: #aea1d1;
+  
+}
 .certification-head{
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 2em;
+  padding: 0.5em;
+  font-size: 2rem;
+  font-weight: 700;
+  /* color: white; */
+  margin-left: auto;
+  padding: 0.3em;
+  border: solid rgb(92, 92, 92) 1px;
+  border-radius: 100px;
+  background-color: var(--secondary-light)
 }
 .certificate{
   background-color: var(--secondary-light);
@@ -404,6 +441,7 @@ body {
   justify-content: center;
 }
 .socials-wrapper {
+  padding-top: 3em;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
