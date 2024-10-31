@@ -413,6 +413,26 @@ body {
 .project{
   background-color: #f66565;
   border-radius: 20px;
+  transition-property: all;
+  transition-duration: 1s;
+}
+.project:hover{
+  background-color: rgb(151, 0, 88);
+  color: white;
+}
+
+.project img{
+  height: 14em;
+  width: 20em;
+  align-self: center;
+  justify-self: center;
+  padding: 2em;
+  cursor: pointer;
+}
+
+
+.project h2, .project p{
+  padding-inline: 1em;
 }
 
 .projects-section fieldset{
@@ -449,10 +469,33 @@ body {
 .certificate{
   background-color: var(--secondary-light);
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  transition-property: all;
+  transition-duration: 1s;
+  /* gap: 0em; */
+}
+
+.certificate:hover{
+  background-color: rgb(11, 2, 44);
+  color: white;
 }
 
 .certificate h2, .certificate p{
-  padding: 1em;
+  padding-inline: 1em;
+}
+
+.certificate img{
+  height: 14em;
+  width: 20em;
+  align-self: center;
+  justify-self: center;
+  padding: 2em;
+  cursor: pointer;
+}
+
+.certificate__img{
+  border-radius: 20px;
 }
 
 .socials-section {
@@ -487,6 +530,17 @@ body {
   align-items: flex-end;
   justify-content: center;
   padding-right: 2em;
+}
+
+.social{
+  cursor: pointer;
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+
+.social:hover{
+  font-size: 1.5em;
+  color: white;
 }
 
 
