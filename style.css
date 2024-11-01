@@ -25,16 +25,18 @@ html{
 }
 
 body {
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   font-family: Nunito, sans-serif;
   background-color: var(--background-light);
   margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   /* position: relative; */
   overflow-x: hidden;
   user-select: none;
+  /* overflow-y: initial; */
 }
 
 /* Custom Scrollbar */
@@ -58,6 +60,7 @@ body {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
   z-index: 100;
+  overflow: hidden;
 }
 
 .navbar::before {
@@ -97,6 +100,7 @@ body {
   );
   animation-name: progress;
   animation-timeline: scroll();
+  overflow: hidden;
 }
 
 .footer {
@@ -118,7 +122,6 @@ body {
   position: relative;
   flex-direction: column;
   justify-content: center;
-  /* border: 2px solid red; */
 }
 
 .hero::before {
@@ -248,13 +251,12 @@ body {
 }
 
 .marquee-wrapper {
-  /* border: solid red 2px; */
   position: relative;
   margin-inline: auto;
   height: 50px;
   padding-top: 2em;
   padding-bottom: 2em;
-  overflow: hidden;
+
 }
 
 .marquee {
@@ -446,7 +448,6 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 1em;
   padding: 1em;
-  /* padding-bottom: 2em; */
 }
 
 .certifications-section fieldset{
@@ -501,6 +502,7 @@ body {
 .socials-section {
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 .socials-wrapper {
   padding-top: 3em;
@@ -573,8 +575,11 @@ body {
 }
 
 .container{
-  /* border: solid red 2px; */
   min-width: 100w;
+}
+
+.navbar{
+  min-width: 100%;
 }
 
 @media (max-width: 1440px){
@@ -585,6 +590,20 @@ body {
   .dp{
     height: 20em;
     width: 20em;
+  }
+  .certificate img{
+    height: 9em;
+    width: 14em;
+  }
+  .project img{
+    height: 9em;
+    width: 14em;
+  }
+  .certificate-wrapper{
+    padding: 0;
+  }
+  .project-wrapper{
+    padding: 0;
   }
   .marquee{
   width: 12rem;
@@ -609,6 +628,43 @@ body {
         font-size: 1.2em;
       }
 }
+
+@media (max-width: 1068px) {
+  .certificate img{
+    height: 1em;
+    width: 1em;
+  }
+  .project img{
+    height: 1em;
+    width: 1em;
+  }
+  .certificate-wrapper{
+    padding: 0;
+  }
+  .project-wrapper{
+    padding: 0;
+  }
+}
+
+
+@media(max-width:1260px){
+  .certificate img{
+    height: 6em;
+    width: 11em;
+  }
+  .project img{
+    height: 6em;
+    width: 11em;
+  }
+  .certificate-wrapper{
+    padding: 0;
+  }
+  .project-wrapper{
+    padding: 0;
+  }
+}
+
+
 
 @media (max-width: 940px){
   .project-wrapper{
@@ -668,6 +724,24 @@ body {
     }
 }
 
+@media (max-width: 670px){
+  .certificate img{
+    height: 6em;
+    width: 11em;
+  }
+  .project img{
+    height: 6em;
+    width: 11em;
+  }
+  .certificate-wrapper{
+    padding: 0;
+  }
+  .project-wrapper{
+    padding: 0;
+  }
+}
+
+
 @media (max-width: 550px){
   .project-wrapper{
     display: grid;
@@ -682,6 +756,20 @@ body {
   .herotitle{
     font-size: 3em;
     font-weight: 800;
+    }
+    .certificate img{
+      height: 12em;
+      width: 17em;
+    }
+    .project img{
+      height: 12em;
+      width: 17em;
+    }
+    .certificate-wrapper{
+      padding: 0;
+    }
+    .project-wrapper{
+      padding: 0;
     }
 }
 
